@@ -1734,7 +1734,7 @@ button.accordion.active:after {
     content: "\f00d";
 }
 
-.product-menu .sidebar-body :not(div.panel) {
+ .faq div.panel {
     padding: 0 15px;
     background-color: white;
     max-height: 0;
@@ -1742,12 +1742,12 @@ button.accordion.active:after {
     transition: max-height 0.2s ease-out;
 }
 
-.product-menu .sidebar-body .panel{
+ .faq .panel{
     border: none;
     margin: 0px;
 }
 
-.panel p{
+.faq .panel p{
     text-align: left;
     padding: 10px 0px 10px 0px;
     color: #999;
@@ -2918,6 +2918,7 @@ main {
 
 .staff .media .media-object img{
     width: 100%;
+    max-width:inherit;
 }
 
 .staff .media .media-body h6.media-heading {

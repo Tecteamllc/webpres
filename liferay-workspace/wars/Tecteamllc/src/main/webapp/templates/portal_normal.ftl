@@ -165,93 +165,7 @@
 		</#if>
 	</section>
 </div>
-    
-<div class="main-footer">
-     <div class="main">
-         <div class="content">
-             <div class="section">
-                 <div class="top-footer">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <div class="span-footer">
-                            <div class="logo-brand"><img src="${images_folder}/master/logo.png" alt=""></div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="span-footer">
-                            <h6><i class="fa fa-location-arrow" aria-hidden="true"></i>&nbsp; OUR OFFICE</h6>
-                            <p>1415 Woodlawn Ave Buffalo</p>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="span-footer">
-                            <h6><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; CALL US</h6>
-                            <p>212-869-3323</p>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="span-footer">
-                            <h6><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; WORKING OURS</h6>
-                            <p>8.00 am to 6:00 pm</p>
-                        </div>
-                      </div>
-                    </div>
-                 </div>
-                 <hr class="footer">
-                 <div class="row">
-                   <div class="col-md-5 footer-column">
-                     <h5 class="footer-heading">ABOUT</h5>
-                     <hr class="short-footer">       
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                     <div class="social-footer">
-                         <div class="social-icons"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>  
-                         <div class="social-icons"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>  
-                         <div class="social-icons"><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></div>  
-                         <div class="social-icons"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>   
-                     </div>
-                   </div>
-                   <div class="col-md-3 news-column">
-                     <h5 class="footer-heading">LATEST NEWS</h5>
-                     <hr class="short-footer">
-                     <p>Contrary to popular belief, Lorem Ipsum. </p>
-                     <hr>
-                     <p>Combined with a handful of model sentence structures. </p>
-                     <hr>   
-                     <p>popularised in the 1960s with the release of Letraset sheets.</p>
-                   </div>
-                   <div class="col-md-4 footer-column">
-                     <h5 class="footer-heading">LATEST PROJECTS</h5>
-                     <hr class="short-footer">
-                     <div class="row">
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                      <div class="col-xs-3 col-sm-3 col-md-3"><div class="footer-thumbnail"><a href="#"><img src="http://placehold.it/500x333" alt=""></a></div></div>
-                    </div>
-                   </div>
-                 </div>
-             </div>
-         </div>
-     </div>   
-</div>
-
-<div class="bottom-footer">
-    <div class="main">
-        <div class="section">
-            <div class="column-left">
-                <p>© All Rights Reserved, Industrial</p>  
-            </div>
-            <div class="column-right">
-                <p><span><a href="#">Terms & Conditions</a></span> &nbsp;•&nbsp; <span><a href="#">Privacy</a></span></p>
-            </div>
-        </div>
-    </div>
-</div>
-    
+        
     <a href="#0" class="cd-top">Top</a>
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -266,6 +180,7 @@
     <script src="${javascript_folder}/contact.js"></script>
     <script src="${javascript_folder}/validator.js"></script>
     <script src="${javascript_folder}/navbar.js"></script>
+    <script src="${javascript_folder}/accordion.js"></script>
     <script src="${javascript_folder}/filters.js"></script>
     <script src="${javascript_folder}/maps-style.js"></script>
     <script src="${javascript_folder}/loader.js"></script>
