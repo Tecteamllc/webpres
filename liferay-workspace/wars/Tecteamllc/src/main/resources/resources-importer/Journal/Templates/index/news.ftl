@@ -13,7 +13,8 @@
                   <div class="front-post-preview">
                     <img src="${cur_postTitle.postImage.getData()}" alt="...">
                       <div class="post-date">
-                       ${cur_postTitle.postDate.getData()}
+                      <#assign postDate = dateUtil.parseDate("yyyy-MM-dd", getterUtil.getString(cur_postTitle.postDate.getData()), locale)>
+                      <h5>${dateUtil.getDate(postDate, "MMM", locale)} <span>${dateUtil.getDate(postDate, "dd", locale)}</span></h5>
                       </div>
                   </div>
                   <div class="caption">

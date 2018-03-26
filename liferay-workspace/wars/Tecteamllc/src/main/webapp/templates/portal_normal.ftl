@@ -23,9 +23,6 @@
 		<#-- ================= Favicon ================= -->  
         <link rel="shortcut icon" href="${images_folder}/favicon.png">
 		
-		<#-- ================= CSS ===================== -->  
-         
-        
         <#-- ================= Fonts =================== -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -35,21 +32,24 @@
 <@liferay_ui["quick-access"] contentId="#main-content" />
 
 <@liferay_util["include"] page=body_top_include />
-	
-<!-- LOADER -->
-<div id="loader-wrapper">
-<div id="loader"></div>
-</div>
-<!-- LOADER -->
+<div class="body-wrapper">
+	<!-- LOADER -->
+	<div id="loader-wrapper">
+	<div id="loader"></div>
+	</div>
+	<!-- LOADER -->
 
-<@liferay.control_menu />
-<!-- MAIN CONTAINER -->
-<div class="wrapper">
-    <!-- MAIN HEADER -->
-    <div class="main-header">
-		<div class="main-slider">
-		    <!-- MAIN NAVBAR -->
-		    <div class="main-navbar">
+	<@liferay.control_menu />
+	<!-- MAIN CONTAINER -->
+	<div class="wrapper">
+		<!-- MAIN HEADER -->
+		<#assign header_class="pages-header"/>
+		<#if nav_items[0].isSelected()>
+			<#assign header_class="main-header"/>
+		</#if>
+		<div class="${header_class}">
+			<!-- MAIN NAVBAR -->
+			<div class="main-navbar">
 				<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
 					<div class="top-header">
 						<div class="container content-top">
@@ -75,108 +75,95 @@
 					<hr class="top">
 					<div class="container">
 						<div class="navbar-header" >
-						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						  </button>
-						  <a class="navbar-brand" href="/templates/industrial/theme4"><div class="logo-brand"><img src="${images_folder}/master/logo.png" alt=""></div></a>
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="/templates/industrial/theme4"><div class="logo-brand"><img src="${images_folder}/master/logo.png" alt=""></div></a>
 						</div>
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						  <ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html">HOME</a></li>
-							<li><a href="about.html">ABOUT</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SOLUTIONS <span class="caret-drop"></span></a>
-								<ul class="dropdown-menu">
-									<li class="divider-top"></li>
-									<li><a href="chemical-research.html">Chemical Research</a></li>
-									<li class="divider"></li>
-									<li><a href="material-engineering.html">Material Engineering</a></li>
-									<li class="divider"></li>
-									<li><a href="agricultural-engineering.html">Agricultural Engineering</a></li>
-									<li class="divider"></li>
-									<li><a href="power-and-energy.html">Power and Energy</a></li>
-									<li class="divider"></li>
-									<li><a href="petroleum-and-gas.html">Petroleum and Gas</a></li>
-									<li class="divider"></li>
-									<li><a href="mechanical-engineering.html">Mechanical Engineering</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECTS <span class="caret-drop"></span></a>
-								<ul class="dropdown-menu">
-									<li class="divider-top"></li>
-									<li><a href="project-grid-two-columns.html">Grid Two Columns</a></li>
-									<li class="divider"></li>
-									<li><a href="project-grid-three-columns.html">Grid Three Columns</a></li>
-									<li class="divider"></li>
-									<li><a href="project-grid-four-columns.html">Grid Four Columns</a></li>
-									<li class="divider"></li>
-									<li><a href="project-details.html">Project Details</a></li>   
-								</ul>
-							</li>
-							<li><a href="contact.html">CONTACT</a></li>
-							<li><a href="shortcodes.html">SHORTCODES</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES <span class="caret-drop"></span></a>
-								<ul class="dropdown-menu">
-									<li class="divider-top"></li>
-									<li><a href="blog-grid.html">Blog Grid</a></li>
-									<li class="divider"></li>
-									<li><a href="blog-single.html">Blog Single</a></li>
-									<li class="divider"></li>
-									<li><a href="faq.html">Faq</a></li>
-									<li class="divider"></li>
-									<li><a href="shop-grid.html">Shop Grip</a></li>
-									<li class="divider"></li>
-									<li><a href="product-detail.html">Product Details</a></li>
-									<li class="divider"></li>
-									<li><a href="careers.html">Careers</a></li>
-									<li class="divider"></li>
-									<li><a href="404.html">404 Page</a></li>
-									<li class="divider"></li>
-									<li><a href="team.html">Team</a></li>
-									<li class="divider"></li>
-									<li><a href="pricing.html">Pricing</a></li>
-								</ul>
-							</li>
-						  </ul>
-						</div>
+
+						<#if has_navigation && is_setup_complete>
+							<#include "${full_templates_path}/navigation.ftl" />
+						</#if>
 					</div>
 				</nav>
 			</div><!-- END MAIN NAVBAR -->
+			<#if !nav_items[0].isSelected() && show_breadcrumbs>
+				<div class="section-heading">
+                    <div class="section">
+						<@liferay.breadcrumbs default_preferences="${preferences}" />
+					</div>
+				</div>
+			</#if>
+		</div>
+		<section id="content">
+			<h1 class="hide-accessible">${the_title}</h1>
+
+			<#if selectable>
+				<@liferay_util["include"] page=content_include />
+			<#else>
+				${portletDisplay.recycle()}
+
+				${portletDisplay.setTitle(the_title)}
+
+				<@liferay_theme["wrap-portlet"] page="portlet.ftl">
+					<@liferay_util["include"] page=content_include />
+				</@>
+			</#if>
+		</section>
+	</div>
+	<div class="main-footer">
+		<div class="main">
+			<div class="content">
+				<div class="section">
+					<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+					<#assign theme_groupID = htmlUtil.escape(theme_display.getCompanyGroupId()?string) />
+					<#assign VOID = freeMarkerPortletPreferences.setValue("articleId", footerTopContentId?string) />
+					<@liferay_portlet["runtime"]
+						defaultPreferences="${freeMarkerPortletPreferences}"
+						portletProviderAction=portletProviderAction.VIEW
+						instanceId="tp_footer"
+						portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+						${freeMarkerPortletPreferences.reset()}
+		
+					<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+					<#assign theme_groupID = htmlUtil.escape(theme_display.getCompanyGroupId()?string) />
+					<#assign VOID = freeMarkerPortletPreferences.setValue("articleId", mainFooterContentId?string) />
+					<@liferay_portlet["runtime"]
+						defaultPreferences="${freeMarkerPortletPreferences}"
+						portletProviderAction=portletProviderAction.VIEW
+						instanceId="main_footer"
+						portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+						${freeMarkerPortletPreferences.reset()}
+				</div>
+			</div>
 		</div>
 	</div>
-	<section id="content">
-		<h1 class="hide-accessible">${the_title}</h1>
 
-		<#if selectable>
-			<@liferay_util["include"] page=content_include />
-		<#else>
-			${portletDisplay.recycle()}
+	<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone")/>
+	<#assign theme_groupID = htmlUtil.escape(theme_display.getCompanyGroupId()?string) />
+	<#assign VOID = freeMarkerPortletPreferences.setValue("articleId", footerBottomContentId?string)>
 
-			${portletDisplay.setTitle(the_title)}
+    <@liferay_portlet["runtime"]
+		defaultPreferences="${freeMarkerPortletPreferences}"
+		portletProviderAction=portletProviderAction.VIEW
+		instanceId="btm_footer"
+		portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+		${freeMarkerPortletPreferences.reset()}
 
-			<@liferay_theme["wrap-portlet"] page="portlet.ftl">
-				<@liferay_util["include"] page=content_include />
-			</@>
-		</#if>
-	</section>
-</div>
-        
     <a href="#0" class="cd-top">Top</a>
+</div>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="${javascript_folder}/top.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js'></script> 
-    <script src="${javascript_folder}/testimonials.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-    <script src="${javascript_folder}/counter.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+<@liferay_util["include"] page=body_bottom_include />
+
+<@liferay_util["include"] page=bottom_include />
+
+	<script src="${javascript_folder}/top.js"></script>
     <script src="${javascript_folder}/jquery.counterup.js"></script>
-    <script src="${javascript_folder}/bootstrap.js"></script>
+    <script src="${javascript_folder}/counter.js"></script>
+    <script src="${javascript_folder}/jquery.waypoints.min.js"></script>    
     <script src="${javascript_folder}/contact.js"></script>
     <script src="${javascript_folder}/validator.js"></script>
     <script src="${javascript_folder}/navbar.js"></script>
@@ -184,6 +171,7 @@
     <script src="${javascript_folder}/filters.js"></script>
     <script src="${javascript_folder}/maps-style.js"></script>
     <script src="${javascript_folder}/loader.js"></script>
+
    <#-- =============== SCRIPTS ================== -->
 
     <script>
@@ -194,11 +182,6 @@
       ga('create', 'UA-101241150-1', 'auto');
       ga('send', 'pageview');
     </script>
-    
-    
-<@liferay_util["include"] page=body_bottom_include />
-
-<@liferay_util["include"] page=bottom_include />
     
 </body>
 
