@@ -13,7 +13,7 @@
 	<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+
 		<#-- ============ Title and Meta Tags ========== -->
 		<title>Industrial - Industrial & Factory Solutions HTML Template</title>
         <meta name="description" content="">
@@ -22,7 +22,7 @@
 
 		<#-- ================= Favicon ================= -->  
         <link rel="shortcut icon" href="${images_folder}/favicon.png">
-		
+
         <#-- ================= Fonts =================== -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -47,57 +47,46 @@
 		<#if nav_items[0].isSelected()>
 			<#assign header_class="main-header"/>
 		</#if>
-		<div class="${header_class}">
-			<!-- MAIN NAVBAR -->
-			<div class="main-navbar">
-				<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-					<div class="top-header">
-						<div class="container content-top">
-							<div class="leftside">
-								<div class="header-items">
-									<p><i class="fa fa-location-arrow" aria-hidden="true"></i>&nbsp; 1415 Woodlawn Ave Buffalo</p>
-								</div>
-								<div class="header-items">
-									<p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; support@industrial.com</p>
-								</div>
-								<div class="header-items">
-									<p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 212-869-3323</p>
-								</div>
-							</div>
-							<div class="rightside">
-								<div class="header-items"><a href="#"><p><i class="fa fa-facebook" aria-hidden="true"></i></p></a></div>
-								<div class="header-items"><a href="#"><p><i class="fa fa-twitter" aria-hidden="true"></i></p></a></div>
-								<div class="header-items"><a href="#"><p><i class="fa fa-instagram" aria-hidden="true"></i></p></a></div>
-								<div class="header-items no-margin"><a href="#"><p><i class="fa fa-youtube-play" aria-hidden="true"></i></p></a></div>
-							</div>
-						</div>
-					</div>
-					<hr class="top">
-					<div class="container">
-						<div class="navbar-header" >
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="/templates/industrial/theme4"><div class="logo-brand"><img src="${images_folder}/master/logo.png" alt=""></div></a>
-						</div>
+		
+		<!-- MAIN NAVBAR -->
+		<div class="main-navbar">
+			<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
 
-						<#if has_navigation && is_setup_complete>
-							<#include "${full_templates_path}/navigation.ftl" />
-						</#if>
+				<#if commonTopHeaderContentId != "" >
+					${freeMarkerPortletPreferences.reset()}
+					<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+					<#assign theme_groupID = htmlUtil.escape(theme_display.getCompanyGroupId()?string) />
+					<#assign VOID = freeMarkerPortletPreferences.setValue("articleId", commonTopHeaderContentId?string) />
+					<@liferay_portlet["runtime"]
+						defaultPreferences="${freeMarkerPortletPreferences}"
+						portletProviderAction=portletProviderAction.VIEW
+						instanceId="common_top_header"
+						portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+				</#if>
+
+				<hr class="top">
+				<div class="container">
+					<div class="navbar-header" >
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="${site_default_url}">
+							<div class="logo-brand">
+								<img src="${site_logo}" alt="logo">
+							</div>
+						</a>
 					</div>
-				</nav>
-			</div><!-- END MAIN NAVBAR -->
-			<#if !nav_items[0].isSelected() && show_breadcrumbs>
-				<div class="section-heading">
-                    <div class="section">
-						<@liferay.breadcrumbs default_preferences="${preferences}" />
-					</div>
+
+					<#if has_navigation && is_setup_complete>
+						<#include "${full_templates_path}/navigation.ftl" />
+					</#if>
 				</div>
-			</#if>
-		</div>
+			</nav>
+		</div><!-- END MAIN NAVBAR -->
+
 		<section id="content">
 			<h1 class="hide-accessible">${the_title}</h1>
 
