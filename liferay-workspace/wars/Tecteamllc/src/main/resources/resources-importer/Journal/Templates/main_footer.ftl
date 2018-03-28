@@ -22,12 +22,14 @@
                     	<#list cur_heading.thumbnailImage.getSiblings() as cur_thumbnailImage>
                     		<div class="col-xs-3 col-sm-3 col-md-3">
                                 <div class="footer-thumbnail">
-                                    <#if cur_thumbnailImage.internalLink?has_content>
+                                    <#if cur_thumbnailImage.internalLink.getData() != "">
                                         <a href="${cur_thumbnailImage.internalLink.getData()}">
-                                    <#else>
+                                    <#elseif cur_thumbnailImage.externalLink.getData() != "">
                                         <a href="${cur_thumbnailImage.externalLink.getData()}">
                                     </#if>
+                                    <#if cur_thumbnailImage.getData() != "">
                                         <img src="${cur_thumbnailImage.getData()}" alt="">
+                                    </#if>
                                     </a>
                                 </div>
                             </div>
