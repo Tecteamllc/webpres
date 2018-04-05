@@ -418,73 +418,77 @@ hr.heading{
 }
 
 @media(min-width:768px) {
-  .navbar-default {
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-    padding: 15px 0;
-    /* Add additional styles here for the UNCOLLAPSED state */
-}
+	.navbar-default {
+		-webkit-transition: all .35s;
+		-moz-transition: all .35s;
+		transition: all .35s;
+		padding: 15px 0;
+		/* Add additional styles here for the UNCOLLAPSED state */
+	}
 
-.navbar-default.affix {
-    padding: 0;
-    background: #333;
-    box-shadow: 0px 6px 16px -2px rgba(0, 0, 0, 0.3);
-}
-    
-.navbar-default.affix .navbar-nav > li > a{
-    color: #fff;
-    margin-top: -10px; 
-}
-    
-.navbar-default.affix .navbar-nav > .active > a{
-    color: #f2a81d;
-}
-       
-.navbar-default.affix .navbar-nav > li > a:hover,
-.navbar-default.affix .navbar-nav > li > a:focus {
-    color: #f2a81d;
-}   
+	.navbar-default.affix {
+		padding: 0;
+		background: #333;
+		box-shadow: 0px 6px 16px -2px rgba(0, 0, 0, 0.3);
+	}
+		
+	.navbar-default.affix .navbar-nav > li > a{
+		color: #fff;
+		margin-top: -10px; 
+	}
+		
+	.navbar-default.affix .navbar-nav > .active > a{
+		color: #f2a81d;
+	}
+		   
+	.navbar-default.affix .navbar-nav > li > a:hover,
+	.navbar-default.affix .navbar-nav > li > a:focus {
+		color: #f2a81d;
+	}   
 
-.navbar-default.affix .navbar-brand{
-    margin-top: -22px;
-} 
-      
-.navbar-default.affix .navbar-brand .logo-brand{
-  width: 150px;
-  height: 36px;
-  margin-top: 0px;
-}
-  
-.navbar-default.affix .navbar-brand .logo-brand img{
-  width: 100%;
-}
+	.navbar-default.affix .navbar-brand{
+		margin-top: -22px;
+	} 
+		  
+	.navbar-default.affix .navbar-brand .logo-brand{
+	  width: 150px;
+	  height: 36px;
+	  margin-top: 0px;
+	}
+	  
+	.navbar-default.affix .navbar-brand .logo-brand img{
+	  width: 100%;
+	}
+		
+	.navbar-default.affix .top-header{
+		background: #f2a81d;
+	}  
+		
+	.navbar-default.affix hr.top{
+		display: none;
+	}   
+		
+	.navbar-default.affix .top-header .content-top{
+		padding: 20px 30px 20px 30px;
+		color: #f2a81d;
+	}
+		
+	.navbar-default.affix .top-header .content-top .fa{
+		color: #FFF;
+	}
+		
+	.navbar-default.affix .top-header .content-top p{
+		font-size: 15px;
+	}
+		
+	.navbar-default.affix .top-header .content-top hr.heading{
+		display: none;
+	}  
     
-.navbar-default.affix .top-header{
-    background: #f2a81d;
-}  
-    
-.navbar-default.affix hr.top{
-    display: none;
-}   
-    
-.navbar-default.affix .top-header .content-top{
-    padding: 20px 30px 20px 30px;
-    color: #f2a81d;
-}
-    
-.navbar-default.affix .top-header .content-top .fa{
-    color: #FFF;
-}
-    
-.navbar-default.affix .top-header .content-top p{
-    font-size: 15px;
-}
-    
-.navbar-default.affix .top-header .content-top hr.heading{
-    display: none;
-}  
-    
+	.navbar-nav.navbar-right, .navbar-nav.navbar-right:last-child {
+		float: right !important;
+		margin-right: -15px;
+	}
 }
 
 .caret-drop{
@@ -1464,6 +1468,10 @@ hr.center{
   font-size: 14px;
   color: #333;
   transition: 0.3s;
+}
+
+.categories-box .list-group-item a {
+    color: #333;
 }
 
 .categories-box .list-group-item:hover {
@@ -2910,6 +2918,7 @@ main {
 
 .staff .media .media-object{
     width: 100px;
+	max-width:inherit;
 }
 
 .staff .media .media-object img{
@@ -3067,7 +3076,7 @@ main {
 }
 
 .testimonials{
-  padding: 20px 15px 20px 15px;
+  padding: 0;
   margin-right: auto;
   margin-left: auto;
   clear: both;
@@ -3226,7 +3235,7 @@ code {
    ========================================================================== */
 .main-footer{
     background: #272721;
-    height: 100%;
+    height: 430px;
     padding: 10px 0px 10px 0px;
 }
 
@@ -3881,13 +3890,17 @@ blockquote{
 	
 }
 
-.portlet-title-text {
-    display:none;
-}
-
 .portlet-content, .portlet-content-editable {
     border-width: 0;
 }
 .portlet-decorate .portlet-content {
     border-width: 0;
+}
+
+.portlet {
+    margin-bottom: 0;
+}
+
+.portlet-blogs .subscribe {
+    display: none;
 }

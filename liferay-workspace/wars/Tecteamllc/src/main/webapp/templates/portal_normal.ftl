@@ -15,7 +15,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<#-- ============ Title and Meta Tags ========== -->
-		<title>Industrial - Industrial & Factory Solutions HTML Template</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="Quickdev">
@@ -26,6 +25,7 @@
         <#-- ================= Fonts =================== -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Archivo+Narrow" rel="stylesheet">
 </head>
 
 <body class="${css_class}">
@@ -62,6 +62,7 @@
 						portletProviderAction=portletProviderAction.VIEW
 						instanceId="common_top_header"
 						portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+						${freeMarkerPortletPreferences.reset()}
 				</#if>
 
 				<hr class="top">

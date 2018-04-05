@@ -6,13 +6,13 @@
             <ul class="nav nav-tabs" role="tablist">
                 <#if tabLabel.getSiblings()?has_content>
                     <#list tabLabel.getSiblings() as cur_tabLabel>
-                        <#if cur_tabLabel_index == 1>
+                        <#if cur_tabLabel_index == 0>
                             <#assign active="active">
                         <#else>
                             <#assign active="">
                         </#if>
                     	<li role="presentation" class="${active}">
-                            <a href="#${cur_tabLabel.tabContentLink.getData()}"  role="tab" data-toggle="tab">
+                            <a href="#${cur_tabLabel.tabContentLink.getData()}" role="tab" data-toggle="tab">
                                 <p>${cur_tabLabel.getData()}</p>
                             </a>
                         </li>
@@ -22,7 +22,7 @@
             <div class="tab-content">
                 <#if tabLabel.getSiblings()?has_content>
                 	<#list tabLabel.getSiblings() as cur_tabLabel>
-                	    <#if cur_tabLabel_index == 1>
+                	    <#if cur_tabLabel_index == 0>
                             <#assign active="active">
                         <#else>
                             <#assign active="">

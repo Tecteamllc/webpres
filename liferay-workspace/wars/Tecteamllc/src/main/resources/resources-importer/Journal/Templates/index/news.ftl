@@ -20,7 +20,7 @@
                   <div class="caption">
                     <h3>${cur_postTitle.getData()}</h3>
                     <p>${cur_postTitle.postDescription.getData()}</p>
-                    <p><a href="${cur_postTitle.postDescription.getData()}" class="btn btn-warning" role="button">READ MORE</a></p>
+                    <p><a href="${cur_postTitle.readMoreLink.getData()}" class="btn btn-warning" role="button">READ MORE</a></p>
                   </div>
                 </div>
               </div>

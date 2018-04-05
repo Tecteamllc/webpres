@@ -3,7 +3,7 @@
 		<div class="leftside">
 			<div class="header-items">
 				<p><i class="${AddressIcon.getData()}" aria-hidden="true"></i>
-				&nbsp; ${ShortAddress.getData()}
+				&nbsp;${ShortAddress.getData()}
 				</p>
 			</div>
 			<div class="header-items">
